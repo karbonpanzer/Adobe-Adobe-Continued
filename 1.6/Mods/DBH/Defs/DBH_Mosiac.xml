@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TerrainDef ParentName="DBHMosaicBase">
+    <defName>DBHMosaicAdobe</defName>
+    <label>adobe mosaic tile</label>
+    <color>(154,108,87)</color>
+    <costList>
+      <JKN_AdobeBlocks>4</JKN_AdobeBlocks>
+    </costList>
+  </TerrainDef>
+
+</Defs>

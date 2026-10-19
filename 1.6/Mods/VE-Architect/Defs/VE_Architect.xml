@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <TerrainDef ParentName="CobblestoneBase">
+    <defName>VFEArch_CobblestoneFloorAdobe</defName>
+    <label>adobe cobblestone floor</label>
+    <color>(154,108,87)</color>
+    <costList>
+      <JKN_AdobeBlocks>4</JKN_AdobeBlocks>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="PolishedStoneFloorBase">
+    <defName>VFEArch_PolishedStoneFloorAdobe</defName>
+    <label>adobe polished stone floor</label>
+    <color>(154,108,87)</color>
+    <costList>
+      <JKN_AdobeBlocks>12</JKN_AdobeBlocks>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="StoneSlabsBase">
+    <defName>VFEArch_SlabsAdobe</defName>
+    <label>adobe slabs</label>
+    <color>(154,108,87)</color>
+    <costList>
+      <JKN_AdobeBlocks>8</JKN_AdobeBlocks>
+    </costList>
+  </TerrainDef>
+
+</Defs>

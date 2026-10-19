@@ -1,0 +1,20 @@
+<loadFolders>
+
+	<v1.6>
+		<li>/</li>
+		<li>1.6</li>
+
+		<li IfModActive="vanillaexpanded.vfearchitect">1.6/Mods/VE-Architect</li>
+		<li IfModActive="dubwise.dubsbadhygiene.lite">1.6/Mods/DBH</li>
+		<li IfModActive="dubwise.dubsbadhygiene">1.6/Mods/DBH</li>
+	</v1.6>
+
+	<v1.7>
+		<li>/</li>
+		<li>1.7</li>
+
+		<li IfModActive="vanillaexpanded.vfearchitect">1.7/Mods/VE-Architect</li>
+		<li IfModActive="dubwise.dubsbadhygiene.lite">1.7/Mods/DBH</li>
+		<li IfModActive="dubwise.dubsbadhygiene">1.7/Mods/DBH</li>
+	</v1.7>	
+</loadFolders>

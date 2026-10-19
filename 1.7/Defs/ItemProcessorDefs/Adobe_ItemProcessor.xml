@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <PipeSystem.ProcessDef>
+    <defName>JKN_BakeAdobe</defName>
+    <label>baking adobe</label>
+    <ingredients>
+      <li>
+        <thing>JKN_AdobeMix</thing>
+        <countNeeded>1</countNeeded>
+      </li>
+    </ingredients>
+    <results>
+      <li>
+        <thing>JKN_AdobeBlocks</thing>
+        <count>30</count>
+      </li>
+    </results>
+    <ticks>90000</ticks>
+    <destroyIngredientsOnStart>true</destroyIngredientsOnStart>
+    <autoExtract>false</autoExtract>
+    <researchPrerequisites>
+      <li>AdobeResearch</li>
+    </researchPrerequisites>
+    <isRainDependingProcess>false</isRainDependingProcess>
+    <rareTicksToDestroy>30</rareTicksToDestroy>
+    <isTemperatureAcceleratingProcess>true</isTemperatureAcceleratingProcess>
+    <minAccelerationTemp>35</minAccelerationTemp>
+    <maxAccelerationTemp>999</maxAccelerationTemp>
+    <accelerationFactor>0.5</accelerationFactor>
+    <lowProgressColor>(0.40, 0.27, 0.22)</lowProgressColor>
+    <finishedColor>(0.60, 0.42, 0.34)</finishedColor>
+  </PipeSystem.ProcessDef>
+
+</Defs>

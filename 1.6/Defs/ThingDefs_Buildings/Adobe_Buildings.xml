@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>JKN_AdobeMixingTable</defName>
+    <label>adobe mixing table</label>
+    <description>A simple table for creating adobe mix. It even has buckets.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <uiIconScale>0.85</uiIconScale>
+    <graphicData>
+      <texPath>Things/Adobe/AdobeMixingTable/AdobeMixingTable</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <drawSize>(2,2)</drawSize>
+      <shadowData>
+        <volume>(2.9, 0.3, 0.5)</volume>
+        <offset>(0, 0, 0)</offset>
+      </shadowData>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <costList>
+      <Steel>10</Steel>
+    </costList>
+    <stuffCategories>
+      <li>Stony</li>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <costStuffCount>15</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>1500</WorkToBuild>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <Cleanliness>-5</Cleanliness>
+    </statBases>
+    <size>(1,1)</size>
+    <designationCategory>Production</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <recipes>
+      <li>Make_AdobeMix</li>
+    </recipes>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <paintable>true</paintable>
+    </building>
+    <comps>
+      <li Class="CompProperties_AffectedByFacilities">
+        <linkableFacilities>
+          <li>ToolCabinet</li>
+        </linkableFacilities>
+      </li>
+    </comps>
+    <designationHotKey>Misc2</designationHotKey>
+    <placeWorkers>
+      <li>PlaceWorker_ShowFacilitiesConnections</li>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>AdobeResearch</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>JKN_AdobeBakingFrame</defName>
+    <label>adobe baking frame</label>
+    <description>A wooden frame with several rectangular molds for baking adobe. Load it with adobe mix and let the sun cure it into blocks. Rain will ruin an unfinished batch, so keep it out from under roofs but watch the weather.</description>
+    <tickerType>Rare</tickerType>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <size>(2,1)</size>
+    <graphicData>
+      <texPath>Things/Adobe/AdobeFrame/AdobeFrame</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <damageData>
+        <rect>(0.05,0.1,0.9,0.9)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.75, 0.35, 0.33)</volume>
+      </shadowData>
+      <drawSize>(2,1)</drawSize>
+    </graphicData>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.45</fillPercent>
+    <pathCost>60</pathCost>
+    <thingCategories>
+      <li>BuildingsProduction</li>
+    </thingCategories>
+    <rotatable>true</rotatable>
+    <designationCategory>Production</designationCategory>
+    <constructEffect>ConstructWood</constructEffect>
+    <inspectorTabs>
+      <li>PipeSystem.ITab_Processor</li>
+    </inspectorTabs>
+    <placeWorkers>
+      <li>PlaceWorker_NotUnderRoof</li>
+    </placeWorkers>
+    <building>
+      <allowAutoroof>false</allowAutoroof>
+    </building>
+    <canBeUsedUnderRoof>false</canBeUsedUnderRoof>
+    <researchPrerequisites>
+      <li>AdobeResearch</li>
+    </researchPrerequisites>
+    <statBases>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>10</Mass>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <costList>
+      <WoodLog>15</WoodLog>
+    </costList>
+    <comps>
+      <li Class="PipeSystem.CompProperties_AdvancedResourceProcessor">
+        <notWorkingKey>JKN_AdobeFrameIdle</notWorkingKey>
+        <showProgressBar>true</showProgressBar>
+        <inProgressTexture>Things/Adobe/AdobeFrame/Working/AdobeFrame</inProgressTexture>
+        <finishedTexture>Things/Adobe/AdobeFrame/Finished/AdobeFrame</finishedTexture>
+        <processes>
+          <li>JKN_BakeAdobe</li>
+        </processes>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
